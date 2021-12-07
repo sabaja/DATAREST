@@ -24,7 +24,6 @@ public class PerformanceMensile {
     private String nome;
 
     //https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/
-    @OneToOne(mappedBy = "performanceMensile", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
     private Flusso flusso;
 }
