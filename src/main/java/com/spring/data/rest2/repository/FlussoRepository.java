@@ -1,9 +1,9 @@
 package com.spring.data.rest2.repository;
 
-import com.spring.data.rest2.entities.Flusso;
+import com.spring.data.rest2.entities.FlussoEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "Flusso", path = "flusso")
-public interface FlussoRepository extends PagingAndSortingRepository<Flusso, Long> {
+@RepositoryRestResource(collectionResourceRel = "FlussoEntity", path = "flusso")
+public interface FlussoRepository extends PagingAndSortingRepository<FlussoEntity, Long> {
 }

@@ -14,9 +14,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Flusso {
+public class FlussoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
