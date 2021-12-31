@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-
+import java.math.BigInteger;
 
 @Entity
 @Table(name = "Flusso")
@@ -16,10 +16,14 @@ import javax.persistence.*;
 @Setter
 public class FlussoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String status;
+
     private String name;
-    private String surname;
+
+    @Transient
+    private BigInteger numberOfAffidiDiFlusso;
 }

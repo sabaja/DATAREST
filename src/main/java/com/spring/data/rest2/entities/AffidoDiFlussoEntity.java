@@ -7,23 +7,23 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "Performance")
+@Table(name = "AffidoDiFlusso")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class PerformanceEntity {
+public class AffidoDiFlussoEntity {
     @Id
-    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    private String state;
+    private String affido;
+    private String contratto;
 
-    private String name;
-
-    //https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "flusso_id")
     private FlussoEntity flusso;
 }
