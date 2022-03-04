@@ -12,6 +12,6 @@ public interface FlussoProjection {
 
     String getName();
 
-    @Value("#{@affidoDiFlussoRepository.getTotalByFlussoId(target.id)}")
+    @Value(value = "#{@affidoDiFlussoRepository.getTotalByFlussoId(target.id)}")
     Long getNumberOfAffidiDiFlusso();
 }
